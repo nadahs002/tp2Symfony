@@ -10,10 +10,11 @@ class IndexController extends AbstractController
 {
     
 /**
-*@Route("/{name}")
+*@Route("/")
 */
-public function home($name) : Response
+public function home() 
 {
-return $this->render('index/index.html.twig',['name' => $name]);
+    $articles = ['Artcile1', 'Article 2','Article 3'];
+return $this->render('articles/index.html.twig',['articles' => $articles]);
 }
 }
